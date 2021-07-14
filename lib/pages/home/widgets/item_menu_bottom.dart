@@ -26,7 +26,7 @@ class ItemMenuBottom extends StatelessWidget {
             ],
           ),
         ),
-        width: MediaQuery.of(context).size.width * .19,
+        width: MediaQuery.of(context).size.width * .22,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5), color: Colors.white24),
       ),

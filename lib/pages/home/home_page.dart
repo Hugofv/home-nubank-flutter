@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teste/pages/home/widgets/item_menu_bottom.dart';
+import 'package:teste/pages/home/widgets/bottom_menu.dart';
 import 'package:teste/pages/home/widgets/menu_app.dart';
 import 'package:teste/pages/home/widgets/my_app_bar.dart';
 import 'package:teste/pages/home/widgets/my_dots_app.dart';
@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage> {
             top: _screenHeight * .20,
             showMenu: _showMenu,
           ),
+          BottomMenu(showMenu: _showMenu),
           PageViewApp(
             top: _yPosition,
             showMenu: _showMenu,
@@ -98,62 +99,6 @@ class _HomePageState extends State<HomePage> {
             currentIndex: _currentIndex,
             showMenu: _showMenu,
           ),
-          AnimatedPositioned(
-            duration: Duration(milliseconds: 200),
-            bottom: !_showMenu ? 0 + MediaQuery.of(context).padding.bottom : 0,
-            left: 0,
-            right: 0,
-            height: _screenHeight * .12,
-            child: AnimatedOpacity(
-              duration: Duration(milliseconds: 200),
-              opacity: !_showMenu ? 1 : 0,
-              child: Container(
-                height: 150,
-                child: ListView(
-                  physics: BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    ItemMenuBottom(
-                      icon: Icons.person_add,
-                      text: 'Indicar amigos',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.phone,
-                      text: 'Recarga de celular',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.chat,
-                      text: 'Cobrar',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.monetization_on,
-                      text: 'Empréstimos',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.move_to_inbox,
-                      text: 'Depositar',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.mobile_screen_share,
-                      text: 'Transferir',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.format_align_center,
-                      text: 'Ajustar limite',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.chrome_reader_mode,
-                      text: 'Pagar',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.lock_open,
-                      text: 'Bloquear cartão',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          )
         ],
       ),
     );
