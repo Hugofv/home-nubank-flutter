@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:teste/pages/home/widgets/card_app.dart';
 import 'package:teste/pages/home/widgets/first_card.dart';
+import 'package:teste/pages/home/widgets/second_card.dart';
+import 'package:teste/pages/home/widgets/third_card.dart';
 
 class PageViewApp extends StatelessWidget {
   final double top;
@@ -36,10 +38,10 @@ class PageViewApp extends StatelessWidget {
               child: FirstCard(),
             ),
             CardApp(
-              child: FirstCard(),
+              child: SecondCard(),
             ),
             CardApp(
-              child: FirstCard(),
+              child: ThirdCard(),
             ),
           ],
         ),

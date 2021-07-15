@@ -10,6 +10,7 @@ class CardApp extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Container(
+        child: child,
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(5))),
     );
